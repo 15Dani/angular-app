@@ -1,0 +1,44 @@
+.secondary_header{
+
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 1px;
+    padding-bottom: 40px;
+}
+
+
+.secondary_header {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #B3B3B3;
+    clear: left;
+}
+
+
+.secondary_header a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secondary_header  li {
+    list-style: none;
+    float: left;
+    margin-right: auto;
+    margin-top: 0px;
+    font-weight: normal;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    margin-left: auto;
+    text-align: center;
+    width: 16%;
+    transition: all 0.3s linear;
+}
+
+nav {
+    display: block;
+}
+
