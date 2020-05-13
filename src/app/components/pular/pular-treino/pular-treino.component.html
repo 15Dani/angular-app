@@ -1,0 +1,313 @@
+<html>
+<body>
+  <div class="container">
+    <header>
+      <div class="primary_header">
+        <h1 class="title">  Teste Computadorizado de Atenção auditiva</h1>
+      </div>
+      <!--nav-->
+      <nav class="secondary_header" id="menu">
+        <ul>
+          <li><a href="index.asp">INÍCIO</a></li>
+          <!--m1--><!--m1-->
+          <!--m2--><!--m2-->
+        </ul>
+      </nav>
+      <!--nav-->
+    </header>
+
+
+
+    <!--tudo-->
+  <div style="text-align: center;padding-top: 30px;">
+  <div id="maisinfo">
+  <!--infos--><br>Grupo CERTO: <span style="color:#00AA00;"><strong>ANIMAIS</strong></span><br>Grupo ERRADO: <span style="color:#FF0000;"><strong>COMIDAS</strong></span><br><br><!--infos-->
+  </div>
+  </div>
+  <div id="tit" style="float: left;"></div><div style="float: right;" id="decorrido"></div>
+
+  <div id="wrapper" style="background-color:#FFFFFF;width:90%;margin: auto;">
+    <audio preload="auto" controls="" id="audio_estimulo" hidden="hidden" onended="re();">
+    <source src="/testea/n/audios3/a1.mp3">
+    </audio>
+    <div id="par"></div>
+    <div id="stop"></div>
+    <div id="status" style="text-align: center;width: 80%;margin: auto;">
+      <p>Neste teste o computador emitirá alternadamente, sons da voz humana proferindo nomes de <strong>objetos, animais ou alimentos</strong>.</p>
+    <p>Quando você ouvir um nome do grupo CERTO, pressione qualquer tecla o mais rápido que puder. Se ouvir um nome do grupo errado, não tome nenhuma ação.</p>
+  </div>
+    <p align="center">
+    </p><div id="barrakey" style="text-align: center;" onclick="capturar()"></div><p></p>
+    <!--<input type="button" onClick="parar2();" value="Parar e ver output">-->
+    <div id="lista">
+  </div>
+
+  <form id="frm2" method="post" action="fim.asp">
+    <input type="hidden" name="saida" id="saida" value="1">
+    <input type="hidden" name="u" id="u" value="2">
+  </form>
+
+  <!--tudo-->
+
+  </div>
+  <script>
+
+  document.getElementById("wrapper").focus();
+
+  </script>
+
+
+    <div class="row"></div>
+    <div class="row blockDisplay"></div>
+    <footer class="secondary_header footer">
+      <div class="copyright">©2020 - DESENVOLVIDO POR ELEVECOMUNICAÇÃO<!--<span style="font-size: 8px;"> - <a href="fim.asp?par=rever&nteste=1266">outros</a></span>--></div>
+    </footer>
+  </div>
+
+  <!--scrval--><!--scrval-->
+
+  <script>//<!--script-->
+  var catgo='a';
+  dura = 120
+  estimulo[1] = "audios4/c3.mp3";
+  estimulo[2] = "audios4/c4.mp3";
+  estimulo[3] = "audios4/c1.mp3";
+  estimulo[4] = "audios4/c3.mp3";
+  estimulo[5] = "audios4/c1.mp3";
+  estimulo[6] = "audios4/c3.mp3";
+  estimulo[7] = "audios4/c4.mp3";
+  estimulo[8] = "audios4/c5.mp3";
+  estimulo[9] = "audios4/c5.mp3";
+  estimulo[10] = "audios4/c1.mp3";
+  estimulo[11] = "audios4/c2.mp3";
+  estimulo[12] = "audios4/c4.mp3";
+  estimulo[13] = "audios4/c2.mp3";
+  estimulo[14] = "audios4/c5.mp3";
+  estimulo[15] = "audios4/c2.mp3";
+  estimulo[16] = "audios4/a2.mp3";
+  estimulo[17] = "audios4/a1.mp3";
+  estimulo[18] = "audios4/a4.mp3";
+  estimulo[19] = "audios4/a3.mp3";
+  estimulo[20] = "audios4/c5.mp3";
+  estimulo[21] = "audios4/c1.mp3";
+  estimulo[22] = "audios4/a3.mp3";
+  estimulo[23] = "audios4/c4.mp3";
+  estimulo[24] = "audios4/c4.mp3";
+  estimulo[25] = "audios4/c5.mp3";
+  estimulo[26] = "audios4/c3.mp3";
+  estimulo[27] = "audios4/c2.mp3";
+  estimulo[28] = "audios4/a2.mp3";
+  estimulo[29] = "audios4/c4.mp3";
+  estimulo[30] = "audios4/c5.mp3";
+  estimulo[31] = "audios4/c3.mp3";
+  estimulo[32] = "audios4/c2.mp3";
+  estimulo[33] = "audios4/c3.mp3";
+  estimulo[34] = "audios4/a5.mp3";
+  estimulo[35] = "audios4/c4.mp3";
+  estimulo[36] = "audios4/c5.mp3";
+  estimulo[37] = "audios4/c1.mp3";
+  estimulo[38] = "audios4/a1.mp3";
+  estimulo[39] = "audios4/c1.mp3";
+  estimulo[40] = "audios4/c2.mp3";
+  estimulo[41] = "audios4/a1.mp3";
+  estimulo[42] = "audios4/c5.mp3";
+  estimulo[43] = "audios4/c3.mp3";
+  estimulo[44] = "audios4/c3.mp3";
+  estimulo[45] = "audios4/c3.mp3";
+  estimulo[46] = "audios4/a2.mp3";
+  estimulo[47] = "audios4/c4.mp3";
+  estimulo[48] = "audios4/c6.mp3";
+  estimulo[49] = "audios4/c1.mp3";
+  estimulo[50] = "audios4/c5.mp3";
+  estimulo[51] = "audios4/a5.mp3";
+  estimulo[52] = "audios4/c1.mp3";
+  estimulo[53] = "audios4/a4.mp3";
+  estimulo[54] = "audios4/c4.mp3";
+  estimulo[55] = "audios4/c6.mp3";
+  estimulo[56] = "audios4/c2.mp3";
+  estimulo[57] = "audios4/c2.mp3";
+  estimulo[58] = "audios4/c2.mp3";
+  estimulo[59] = "audios4/c1.mp3";
+  estimulo[60] = "audios4/c4.mp3";
+  estimulo[61] = "audios4/a6.mp3";
+  estimulo[62] = "audios4/a4.mp3";
+  estimulo[63] = "audios4/a1.mp3";
+  estimulo[64] = "audios4/a1.mp3";
+  estimulo[65] = "audios4/c3.mp3";
+  estimulo[66] = "audios4/a1.mp3";
+  estimulo[67] = "audios4/a2.mp3";
+  estimulo[68] = "audios4/c2.mp3";
+  estimulo[69] = "audios4/a2.mp3";
+  estimulo[70] = "audios4/a4.mp3";
+  estimulo[71] = "audios4/a3.mp3";
+  estimulo[72] = "audios4/a3.mp3";
+  estimulo[73] = "audios4/c1.mp3";
+  estimulo[74] = "audios4/a2.mp3";
+  estimulo[75] = "audios4/a6.mp3";
+  estimulo[76] = "audios4/c4.mp3";
+  estimulo[77] = "audios4/a5.mp3";
+  estimulo[78] = "audios4/a5.mp3";
+  estimulo[79] = "audios4/a4.mp3";
+  estimulo[80] = "audios4/a3.mp3";
+  estimulo[81] = "audios4/c4.mp3";
+  estimulo[82] = "audios4/a4.mp3";
+  estimulo[83] = "audios4/a3.mp3";
+  estimulo[84] = "audios4/c3.mp3";
+  estimulo[85] = "audios4/a2.mp3";
+  estimulo[86] = "audios4/a5.mp3";
+  estimulo[87] = "audios4/a5.mp3";
+  estimulo[88] = "audios4/a4.mp3";
+  estimulo[89] = "audios4/a3.mp3";
+  estimulo[90] = "audios4/a3.mp3";
+  estimulo[91] = "audios4/a1.mp3";
+  estimulo[92] = "audios4/c1.mp3";
+  estimulo[93] = "audios4/a2.mp3";
+  estimulo[94] = "audios4/c2.mp3";
+  estimulo[95] = "audios4/a1.mp3";
+  estimulo[96] = "audios4/a1.mp3";
+  estimulo[97] = "audios4/a5.mp3";
+  estimulo[98] = "audios4/a2.mp3";
+  estimulo[99] = "audios4/a6.mp3";
+  estimulo[100] = "audios4/a6.mp3";
+  estimulo[101] = "audios4/a6.mp3";
+  estimulo[102] = "audios4/a5.mp3";
+  estimulo[103] = "audios4/a4.mp3";
+  estimulo[104] = "audios4/c4.mp3";
+  estimulo[105] = "audios4/a4.mp3";
+  estimulo[106] = "audios4/a3.mp3";
+  estimulo[107] = "audios4/c5.mp3";
+  estimulo[108] = "audios4/a1.mp3";
+  estimulo[109] = "audios4/a1.mp3";
+  estimulo[110] = "audios4/c2.mp3";
+  estimulo[111] = "audios4/a5.mp3";
+  estimulo[112] = "audios4/a2.mp3";
+  estimulo[113] = "audios4/a3.mp3";
+  estimulo[114] = "audios4/a3.mp3";
+  estimulo[115] = "audios4/a1.mp3";
+  estimulo[116] = "audios4/a6.mp3";
+  estimulo[117] = "audios4/c1.mp3";
+  estimulo[118] = "audios4/a2.mp3";
+  estimulo[119] = "audios4/a3.mp3";
+  estimulo[120] = "audios4/a2.mp3";
+  tempo[1] = "1000";
+  tempo[2] = "1000";
+  tempo[3] = "1000";
+  tempo[4] = "1000";
+  tempo[5] = "1000";
+  tempo[6] = "1000";
+  tempo[7] = "1000";
+  tempo[8] = "1000";
+  tempo[9] = "1000";
+  tempo[10] = "1000";
+  tempo[11] = "1000";
+  tempo[12] = "1000";
+  tempo[13] = "1000";
+  tempo[14] = "1000";
+  tempo[15] = "1000";
+  tempo[16] = "1000";
+  tempo[17] = "1000";
+  tempo[18] = "1000";
+  tempo[19] = "1000";
+  tempo[20] = "1000";
+  tempo[21] = "2000";
+  tempo[22] = "2000";
+  tempo[23] = "2000";
+  tempo[24] = "2000";
+  tempo[25] = "2000";
+  tempo[26] = "2000";
+  tempo[27] = "2000";
+  tempo[28] = "2000";
+  tempo[29] = "2000";
+  tempo[30] = "2000";
+  tempo[31] = "2000";
+  tempo[32] = "2000";
+  tempo[33] = "2000";
+  tempo[34] = "2000";
+  tempo[35] = "2000";
+  tempo[36] = "2000";
+  tempo[37] = "2000";
+  tempo[38] = "2000";
+  tempo[39] = "2000";
+  tempo[40] = "2000";
+  tempo[41] = "4000";
+  tempo[42] = "4000";
+  tempo[43] = "4000";
+  tempo[44] = "4000";
+  tempo[45] = "4000";
+  tempo[46] = "4000";
+  tempo[47] = "4000";
+  tempo[48] = "4000";
+  tempo[49] = "4000";
+  tempo[50] = "4000";
+  tempo[51] = "4000";
+  tempo[52] = "4000";
+  tempo[53] = "4000";
+  tempo[54] = "4000";
+  tempo[55] = "4000";
+  tempo[56] = "4000";
+  tempo[57] = "4000";
+  tempo[58] = "4000";
+  tempo[59] = "4000";
+  tempo[60] = "4000";
+  tempo[61] = "1000";
+  tempo[62] = "1000";
+  tempo[63] = "1000";
+  tempo[64] = "1000";
+  tempo[65] = "1000";
+  tempo[66] = "1000";
+  tempo[67] = "1000";
+  tempo[68] = "1000";
+  tempo[69] = "1000";
+  tempo[70] = "1000";
+  tempo[71] = "1000";
+  tempo[72] = "1000";
+  tempo[73] = "1000";
+  tempo[74] = "1000";
+  tempo[75] = "1000";
+  tempo[76] = "1000";
+  tempo[77] = "1000";
+  tempo[78] = "1000";
+  tempo[79] = "1000";
+  tempo[80] = "1000";
+  tempo[81] = "2000";
+  tempo[82] = "2000";
+  tempo[83] = "2000";
+  tempo[84] = "2000";
+  tempo[85] = "2000";
+  tempo[86] = "2000";
+  tempo[87] = "2000";
+  tempo[88] = "2000";
+  tempo[89] = "2000";
+  tempo[90] = "2000";
+  tempo[91] = "2000";
+  tempo[92] = "2000";
+  tempo[93] = "2000";
+  tempo[94] = "2000";
+  tempo[95] = "2000";
+  tempo[96] = "2000";
+  tempo[97] = "2000";
+  tempo[98] = "2000";
+  tempo[99] = "2000";
+  tempo[100] = "2000";
+  tempo[101] = "4000";
+  tempo[102] = "4000";
+  tempo[103] = "4000";
+  tempo[104] = "4000";
+  tempo[105] = "4000";
+  tempo[106] = "4000";
+  tempo[107] = "4000";
+  tempo[108] = "4000";
+  tempo[109] = "4000";
+  tempo[110] = "4000";
+  tempo[111] = "4000";
+  tempo[112] = "4000";
+  tempo[113] = "4000";
+  tempo[114] = "4000";
+  tempo[115] = "4000";
+  tempo[116] = "4000";
+  tempo[117] = "4000";
+  tempo[118] = "4000";
+  tempo[119] = "4000";
+  tempo[120] = "4000";<!--script--></script>
+  </body>
+  </html>

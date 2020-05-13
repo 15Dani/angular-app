@@ -4,13 +4,13 @@
     position: fixed;
     top: 0;
     right: 0;
-    left: 0;
+    left: 3;
     background-color: #56b4cd;
-    width: 100%;
+    width: 95%;
     padding-top: 10px;
     clear: left;
     border-bottom: 2px solid #2C9AB7;
-   
+
 
 }
 
@@ -23,7 +23,7 @@
      text-align: center;
      padding: 10px 10px;
      margin: 21.44px 0px;
-     
+
 }
 
 .header .title-group{
@@ -32,4 +32,22 @@
 
 }
 
+.title{
 
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+
+h1{
+
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+}

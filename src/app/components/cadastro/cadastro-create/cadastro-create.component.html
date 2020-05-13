@@ -1,0 +1,122 @@
+<html>
+  <body>
+<div class="form">
+  <app-header></app-header>
+  <app-header2></app-header2>
+  <form id="frm1" action="cadastro" method="POST">
+      <input type="hidden" name="id" value="id">
+      <input type="hidden" name="treino" value="n">
+      <div id="frm">
+          <mat-card-title>Informe seus dados para iniciar o teste</mat-card-title>
+          <table width="90%" cellspacing="5">
+              <tbody>
+                  <tr>
+                      <td width="63">Nome:</td>
+                      <td width="216">
+                          <input class="txt" data-validation="alphanumeric" data-validation-error-msg="<span> !</span>" type="text" name="nome" value=""
+                          [(ngModel)]="cadastro.nome">
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>E-mail:</td>
+                      <td>
+                          <input class="txt" data-validation="email" data-validation-error-msg="<span> !</span> " type="text" name="email" value=""
+                          [(ngModel)]="cadastro.email">
+                      </td>
+                  </tr>
+                  <tr>
+                  <td>Idade: </td>
+                    <td>
+                      <input class="txt" data-validation="number" data-validation-error-msg="<span> !</span> " type="number" name="idade" value=""
+                      [(ngModel)]="cadastro.idade">
+                    </td>
+                    </tr>
+                    <tr>
+                        <td width="63">IDHM:</td>
+                        <td width="216">
+                          <input class="txt" data-validation="alphanumeric" data-validation-error-msg="<span> !</span>" type="text" name="idhm" value=""
+                          [(ngModel)]="cadastro.iDHM">
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>Instrução:</td>
+                    <td>
+                    <select class="sel" data-validation="required" data-validation-error-msg="<span> !</span> " name="instrucao"
+                      [(ngModel)]="cadastro.instrucao" >
+                      <option value="">Selecione </option>
+                      <option value="0">Analfabeto</option>
+                      <option value="1">Ensino Fundamental</option>
+                      <option value="2">Ensino Médio</option>
+                      <option value="3">Superior completo</option>
+                      <option value="4">Pós-Graduação</option>
+                      <option value="5">Mestrado</option>
+                      <option value="6">Doutorado</option>
+                      <option value="7">Pós-Doutorado</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td width="63">Anos de Escolaridade:</td>
+              <td width="216">
+                  <input class="txt" data-validation="alphanumeric" data-validation-error-msg="<span> !</span>" type="text" name="anosescolaridade" value=""
+                  [(ngModel)]="cadastro.anosdeescolaridade" >
+              </td>
+          </tr>
+          <tr>
+              <td>Gênero:</td>
+              <td>
+                  <input type="radio" name="genero" value="M" checked  [(ngModel)]="cadastro.genero">
+                  Masculino
+                  <input type="radio" name="genero" value="F" [(ngModel)]="cadastro.genero">
+                  Feminino
+              </td>
+          </tr>
+          <tr>
+              <td> Later.:</td>
+              <td>
+                  <input type="radio" name="lat" value="E" [(ngModel)]="cadastro.later">
+                  Canhoto
+                  <input type="radio" name="lat" value="D" checked [(ngModel)]="cadastro.later">
+                  Destro
+              </td>
+          </tr>
+          <tr>
+              <td>Duração:</td>
+              <td>
+                  <input type="radio" name="duracao" value="40" [(ngModel)]="cadastro.duracao">
+                  5 min.&nbsp;
+                  <input type="radio" name="duracao" value="80" [(ngModel)]="cadastro.duracao">
+                  10 min&nbsp;
+                  <input type="radio" name="duracao" value="120" [(ngModel)]="cadastro.duracao">
+                  15 min.
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2" align="left">
+                  <input class="btn" type="button" name="novo" value="Limpar" id="nv" onclick="window.location;">
+                  <input class="btn" type="submit" name="submit" value="Iniciar" id="submit"(click)="createCadastro()">
+              </td>
+          </tr>
+              </tbody>
+          </table>
+          <div>
+              <span style="color:#FF0004;"><!--resp--><!--resp--></span>
+          </div>
+      </div>
+  </form>
+</div>
+<aside class="right_article">
+<br>
+<br>
+<br>
+<img src="assets/Imagens/goal2.jpg" width="90%">
+<!-- <app-footer></app-footer> -->
+</aside>
+<div class="row">
+    <div class="row blockDisplay"></div>
+    <footer class="secondary_header footer">
+      <div class="copyright">©2020 - DESENVOLVIDO POR ELEVECOMUNICAÇÃO<!--<span style="font-size: 8px;"> - <a href="fim.asp?par=rever&nteste=1266">outros</a></span>--></div>
+    </footer>
+  </div>
+</body>
+</html>

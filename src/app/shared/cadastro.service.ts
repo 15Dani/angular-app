@@ -1,21 +1,21 @@
 
-import { Usuario } from './../model/usuario.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Observable, throwError, EMPTY  } from 'rxjs';
 
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { Cadastro } from '../model/cadastro.model';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class CadastroService {
 
 
  readonly rootUrl = 'http://localhost:5000/api';
- list: Usuario[];
+ list: Cadastro[];
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -29,25 +29,26 @@ export class UsuarioService {
   }
 
 
-   createUsuario(data: Usuario): Observable<any> {
-   const API_URL = `${this.rootUrl}/meu-cadastro/salvar-cadastrado`;
+   createCadastro(data: Cadastro): Observable<any> {
+   const API_URL = `${this.rootUrl}/meu-cadastro/salvar-cadastro`;
    const reqHeader = new HttpHeaders().set('Content-Type', 'application/json')
    .set('Accept', 'application/json');
-   return this.http.post(API_URL, data,{headers : reqHeader})
+   console.log(data);
+   return this.http.post(API_URL, data,{ headers : reqHeader})
     .pipe(
       catchError(this.error)
     );
 
    }
 
-   teste(): Observable<any> {
-    const API_URL = `${this.rootUrl}/meu-cadastro/test-api`;
-    return this.http.post(API_URL, {name: "teste"})
-     .pipe(
-       catchError(this.error)
-     );
+  //  teste(): Observable<any> {
+  //   const API_URL = `${this.rootUrl}/meu-cadastro/test-api`;
+  //   return this.http.post(API_URL, {name: "teste"})
+  //    .pipe(
+  //      catchError(this.error)
+  //    );
 
-    }
+  //   }
 
 
    errorHandler(e: any): Observable<any> {

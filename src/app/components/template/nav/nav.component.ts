@@ -1,6 +1,5 @@
-import { UsuarioService } from './../../../shared/usuario.service';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/model/usuario.model';
+
 
 @Component({
   selector: 'app-nav',
@@ -9,32 +8,21 @@ import { Usuario } from 'src/app/model/usuario.model';
 })
 export class NavComponent implements OnInit {
 
-  usuario =new Usuario();
+  // usuario = new Usuario();
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor() {}
+
+  // constructor(private usuarioService: UsuarioService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  /* createUsuario(){
-       let cadastro = {
-        nome: "dani",
-        email:"da@bol.com.br",
-        idade: 12,
-        iDHM: "teste",
-        instrucao: "superior",
-        anosdeescolaridade: 20,
-        genero: "F",
-        later: "teste",
-        duracao: 20
-       };
-       this.usuarioService.createUsuario(cadastro); */
+      //  createUsuario(): void{
+      //   // this.usuarioService.createUsuario(this.usuario).subscribe(() => {
+      //   // // this.usuarioService.showMessage('Criado!');
+      //   var usuarioId = 123;
+      //   this.router.navigate([ `/treinar/${usuarioId}`]);
 
-       createUsuario(): void{
-        let cadastro = new Usuario();
-        cadastro.nome = "testes";
-        this.usuarioService.createUsuario(cadastro).subscribe(() => {
-        this.usuarioService.showMessage('Criado!')
-       });
+      //  });
   }
-}
+

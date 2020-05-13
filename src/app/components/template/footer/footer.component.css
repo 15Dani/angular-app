@@ -4,6 +4,7 @@
     display: flex;
     justify-content: flex-start;
     background-color: #FFFFFF;
+    display: block;
 
 }
 
@@ -23,3 +24,5 @@
     letter-spacing: 2px;
     border-top-width: 2px;
 }
+
+

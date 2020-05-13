@@ -1,0 +1,63 @@
+<html>
+<div class="container">
+  <header>
+    <div class="primary_header">
+      <h1 class="title">  TREINO</h1>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+          <li><a href="index.asp?par=iniciar">INÍCIO</a></li>
+          <li><a href="index.asp?par=iniciar">TREINAR</a></li>
+          <li><a href="index.asp?par=testar">PULAR O TREINO</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+<!--tudo-->
+<div style="text-align: center;padding-top: 30px;">
+
+<!--infos-->
+<h3>Essa é uma página de treinamento sem efeito no resultado</h3><!--<br><br>Grupo CERTO: <span style="color:#00AA00;"><strong>ANIMAIS</strong></span><br>Grupo ERRADO: <span style="color:#FF0000;"><strong>COMIDAS</strong></span><br><br>-->
+<!--infos-->
+</div>
+<div id="tit" style="float: left;"></div><div style="float: right;" id="decorrido"></div>
+
+<div id="wrapper" style="background-color:#FFFFFF;width:90%;margin: auto;">
+  <audio preload="auto" controls="" id="audio_estimulo" hidden="hidden" onended="re();">
+	<source src="./audios4/a1.mp3">
+  </audio>
+  <div id="par"></div>
+  <div id="stop"></div>
+  <div id="status" style="text-align: center;width: 80%;margin: auto;">
+    <p>Neste teste o computador emitirá alternadamente, sons da voz humana proferindo nomes de <strong>objetos, animais ou alimentos</strong>.</p>
+  <p>Quando você ouvir um nome do grupo CERTO, pressione qualquer tecla o mais rápido que puder. Se ouvir um nome do grupo errado, não tome nenhuma ação.</p>
+</div>
+  <p align="center">
+  </p><div id="barrakey" style="text-align: center;" onclick="capturar()">***  PRESSIONE QUALQUER TECLA PARA INICIAR O TESTE ***</div><p></p>
+	<!--<input type="button" onClick="parar2();" value="Parar e ver output">-->
+	<div id="lista">
+</div>
+
+<form id="frm2" method="post" action="index.asp?par=testar">
+	<input type="hidden" name="saida" id="saida" value="1">
+	<input type="hidden" name="u" id="u" value="2">
+</form>
+
+<!--tudo-->
+
+</div>
+<script>
+
+document.getElementById("wrapper").focus();
+
+</script>
+
+
+  <div class="row"></div>
+  <div class="row blockDisplay"></div>
+  <footer class="secondary_header footer">
+    <div class="copyright">©2020 - DESENVOLVIDO POR ELEVECOMUNICAÇÃO</div>
+  </footer>
+</div>
+</html>
