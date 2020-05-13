@@ -15,7 +15,7 @@ const routes: Routes = [
 
   { path: 'cadastro/create', component: CadastroCreateComponent },
 
-  // { path: 'pular/treino', component: PularTreinoComponent },
+  { path: 'pular/treino', component: PularTreinoComponent },
 
 
 ];
